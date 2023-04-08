@@ -42,8 +42,10 @@ a {
 
 .main-nav .logo {
   color: var(--main-color);
-  font-size: 1.5rem;
+  font-size: 1.5rem !important;
   text-transform: uppercase;
+  display: inline !important;
+  font-weight: 400;
 }
 
 .main-nav .logo .logo-line {
@@ -74,6 +76,7 @@ a {
   line-height: 2.125rem;
   padding: 0 1.25rem calc(0.625rem + 3px);
   position: relative;
+  font-size: 1rem !important;
 }
 
 .main-nav .nav-links li a:hover {
@@ -168,22 +171,22 @@ a {
 
 /* Background Images */
 #slide1 {
-  background-image: url(images/slide-1.jpg);
+  background-image: url(../images/slide-1.jpg);
 }
 #slide2 {
-  background-image: url(images/slide-2.jpg);
+  background-image: url(../images/slide-2.jpg);
 }
 #slide3 {
-  background-image: url(images/slide-3.jpg);
+  background-image: url(../images/slide-3.jpg);
 }
 #slide4 {
-  background-image: url(images/slide-4.jpg);
+  background-image: url(../images/slide-4.jpg);
 }
 #slide5 {
-  background-image: url(images/slide-5.jpg);
+  background-image: url(../images/slide-5.jpg);
 }
 #slide6 {
-  background-image: url(images/slide-6.jpg);
+  background-image: url(../images/slide-6.jpg);
 }
 
 .slides {
@@ -923,4 +926,10 @@ main p {
 /* Experience */
 .experience-implementation .block-content img {
   top: 60%;
+}
+
+.page-box {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
 }
