@@ -16,6 +16,7 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   background-color: #fff;
   color: #222;
+  overflow-x: hidden;
 }
 
 ul {
@@ -831,7 +832,7 @@ main p {
 
 .services-stats,
 .additional-services {
-  margin-left: 8rem;
+  margin-left: 4rem;
 }
 
 .services-stats li p::before,
@@ -932,4 +933,16 @@ main p {
   min-height: 100%;
   height: auto !important;
   height: 100%;
+}
+
+/* Main Servies */
+.employee .description {
+  background: #f2f2f2;
+  border-top-width: 1px;
+  display: table;
+  height: 72px;
+  line-height: 18px;
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
 }
