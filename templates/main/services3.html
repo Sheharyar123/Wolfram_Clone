@@ -1,499 +1,192 @@
-<!DOCTYPE html>
+{% extends '_base.html' %}
+{% load static %}
 
-<html class="" style="height: auto">
-  <head>
-    <!--[if lt IE 9]>  <html class="no-js old-ie" lang='en'><head itemscope itemtype="http://schema.org/Corporation"  itemref="addresses" >
-	<base href="index.html" />
+{% block title %}Process Consulting{% endblock title %}
 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="_token" content="RaLX04j2nUqiw4P36nlzK7SuTWykznyan3MofW3H"/>
-	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-    <title>
-      HR Focal Point Consulting - Your strategic Partner for Human Capital
-      Management
-    </title>
-
-    <link rel="shortcut icon" href="favicon_v=1.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/ico" />
-    <link rel="icon" href="favicon.gif" type="image/gif" />
-    <link rel="icon" href="favicon.png" type="image/png" />
-
-    <link rel="alternate" hreflang="en" href="index.html" />
-
-    <meta
-      name="description"
-      content="Die HR Focal Point Consulting is a Swiss IT SAP HCM and Finance company."
-    />
-
-    <meta
-      property="og:title"
-      content=" HR Focal Point Consulting - Your strategic Partner for Human Capital Management "
-    />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://www.dbmc.ch  /" />
-    <meta
-      property="og:image"
-      content="http://www.dbmc.ch  /images/logo_new.png"
-    />
-    <meta
-      property="og:description"
-      content="HR Focal Point Consulting is a SAP HCM and Finance Company."
-    />
-    <meta
-      property="og:site_name"
-      content="HR Focal Point Consulting   Official Website"
-    />
-    <meta
-      class="viewport"
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="css/swiper.min.css" />
-    <link rel="stylesheet" href="css/utilities.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- End Google Tag Manager -->
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/swiper.min.js"></script>
-    <meta
-      class="viewport"
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <meta
-      class="viewport"
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <style>
-      :root {
-        --swiper-theme-color: #898a8b;
-      }
-      #big_imgs {
-        width: 100%;
-        height: 503px;
-      }
-      .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-      }
-      .top_txt_bg {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: #000;
-        filter: alpha(Opacity=80);
-        -moz-opacity: 0.3;
-        opacity: 0.3;
-      }
-      #little_item {
-        border-left: 1px solid #e1e1e1;
-      }
-      #little_item .swiper-slide {
-        width: 220px !important;
-        margin-right: 0px !important;
-        border-right: 1px solid #e1e1e1;
-        border-bottom: 1px solid #e1e1e1;
-      }
-      .l_item {
-        text-decoration: none;
-      }
-      .l_item:visited {
-        text-decoration: none;
-      }
-
-      .l_item:visited {
-        color: green;
-        text-decoration: underline !important;
-      }
-      .l_item:hover {
-        color: yellow;
-        text-decoration: none !important;
-      }
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-      h2 {
-        font-size: 1.5rem;
-        font-weight: 600;
-      }
-      h1 {
-        font-weight: 700;
-      }
-      h3 {
-        font-weight: 600;
-        font-size: 1.2rem;
-      }
-      strong {
-        font-weight: 600;
-      }
-    </style>
-  </head>
-  <body class="fixed-header loaded fixed">
-    <header class="main-header">
-      <nav class="main-nav">
-        <a href="index.html"
-          ><h2 class="logo">
-            Swiss Payroll+ <span class="logo-line">|</span>
-            <span class="logo-white">HR Processes</span>
-          </h2>
-        </a>
-        <ul class="nav-links">
-          <li class="menu-trigger dropdown-link">
-            <a href="#" id="expertise-menu">
-              <span>Expertise</span>
-              <i class="fa fa-chevron-down dd-arrow" aria-hidden="true"></i>
-            </a>
-            <ul class="dropdown">
-              <li>
-                <a href="services1.html">Implementation Consulting</a>
-              </li>
-              <li><a href="services2.html">SAP Services Consulting</a></li>
-              <li><a href="services3.html">Process Consulting</a></li>
-              <li><a href="services4.html">Project Management</a></li>
-              <li><a href="services5.html">Development</a></li>
-              <li><a href="services6.html">Support</a></li>
-            </ul>
-          </li>
-          <li><a href="customers.html">Customer Cases</a></li>
-          <a href="contact.html" class="btn btn-sm">Contact Us</a>
-        </ul>
-      </nav>
-    </header>
-    <div class="up" id="myBtn" style="display: none">
-      <span class="glyphicon glyphicon-arrow-up"></span>
-    </div>
-    <div class="wrapper">
-      <div class="page-box" style="width: 100%">
-        <div class="page-box-content" style="width: 100%">
-          <header class="page-header" style="margin-top: 30px !important">
-            <div class="row">
-              <div class="col-sm-12 col-md-12 mx-auto">
-                <h1 class="title text-center" style="margin-bottom: 3rem">
-                  Process Consulting
-                </h1>
-              </div>
-            </div>
-          </header>
-
-          <!-- .header -->
-
-          <div class="umb-grid">
-            <div class="grid-section">
-              <div>
-                <div class="container">
-                  <div class="row clearfix">
-                    <div class="col-md-4 column">
-                      <div>
-                        <h2>Professional IT Consulting</h2>
-                        <p>
-                          We would like to help you to increase your
-                          competitiveness, to react quicker on continuously
-                          changing customer requirements, optimize products and
-                          services, winning new markets, maximize profits and
-                          increase the value of your company in long term. We
-                          create a technology and application environment which
-                          is precisely tailored to your requirements, highly
-                          scalable, available at any time, open for future
-                          developments and standards and supports the core of
-                          your business.
-                        </p>
-
-                        <p>&nbsp;</p>
-                        <p>&nbsp;</p>
-                      </div>
-                    </div>
-                    <div class="col-md-1 column">
-                      <div></div>
-                    </div>
-                    <div class="col-md-4 column">
-                      <div>
-                        <p>
-                          <img
-                            id="__mcenew"
-                            src="./images/beratung-bild-1-klein.jpg"
-                            alt="INKUIBIT Consulting"
-                            rel="3734"
-                            data-id="3734"
-                            style="max-width: 100%; height: auto"
-                          />
-                        </p>
-
-                        <p>&nbsp;</p>
-                        <p>&nbsp;</p>
-                      </div>
-                    </div>
-                    <div class="col-md-3 column">
-                      <div>
-                        <aside class="widget list" style="text-align: center">
-                          <div class="employee">
-                            <div class="default">
-                              <div class="image"></div>
-                              <div class="description">
-                                <div class="vertical" style="padding-top: 5px">
-                                  <p class="name">Manuel Sepulveda</p>
-                                  <div class="role">
-                                    CEO HR Focal Point Consulting Consulting
-                                    GmbH
-                                  </div>
-                                  <br />
-
-                                  <a
-                                    href="javascript:linkTo_UnCryptMailto(&#39;ocknvq&lt;rcvtkem0oeikdpg{Bkpmwdkv0eqo&#39;, 2);"
-                                    class="mail"
-                                  >
-                                    <div
-                                      class="livicon block"
-                                      data-n="mail"
-                                      data-s="16"
-                                      data-op="0"
-                                      data-c="#1e1e1e"
-                                      data-hc="0"
-                                      style="margin-bottom: 5px"
-                                    ></div>
-                                    <small></small>
-                                    Send an E-Mail </a
-                                  ><br /><br />
-                                  <div
-                                    class="social"
-                                    style="margin-top: 5px; margin-bottom: 5px"
-                                  >
-                                    <a href="https://www.xing.com/profile/"
-                                      ><img src="./images/Xing 32px.gif"
-                                    /></a>
-
-                                    <a href="https://www.linkedin.com/in/"
-                                      ><img src="./images/LinkedIn 32px.gif"
-                                    /></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </aside>
-
-                        <p>&nbsp;</p>
-                        <p>&nbsp;</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="container">
-                  <div class="row clearfix">
-                    <div class="col-md-4 column">
-                      <div>
-                        <p>
-                          <img
-                            id="__mcenew"
-                            src="./images/beratung-bild-2-klein.jpg"
-                            alt="HR Focal Point Consulting COnsulting"
-                            rel="3735"
-                            data-id="3735"
-                            style="max-width: 100%; height: auto"
-                          />
-                        </p>
-                      </div>
-                    </div>
-                    <div class="col-md-1 column">
-                      <div></div>
-                    </div>
-                    <div class="col-md-4 column">
-                      <div>
-                        <h2>
-                          <strong style="font-size: 1.7rem"
-                            >Service-Portfolio</strong
-                          >
-                        </h2>
-                        <p>
-                          Our service portfolio includes consulting in
-                          architecture, strategy, technology and the developing
-                          of an individual solution. We cover every customer
-                          section, as well as the whole IT life cycle.
-                        </p>
-                        <p>
-                          <strong style="font-size: 1.1rem"
-                            >IT Architecture and Strategy Consulting</strong
-                          >
-                        </p>
-                        <p>
-                          Innovative technologies help your company to create
-                          business value, as well as stand out from your
-                          competitors. With the use of cloud services, mobility,
-                          big data and social media you can improve the
-                          performance, improve the marketable of your services
-                          and products and react quicker to changing customer
-                          requirements. Through the application of different IT
-                          strategies, we are helping you to use new technologies
-                          in a more efficient and effective way. To introduce an
-                          appropriate IT architecture, we are orientating on
-                          already existing
-                          <strong> business processes </strong>and
-                          organizational structures.
-                        </p>
-                        <p>
-                          <strong style="font-size: 1.1rem"
-                            >Technology Consulting and the Development of
-                            Individual Solutions</strong
-                          >
-                        </p>
-                        <p>
-                          We develop software solutions adjusted to your
-                          business and IT requirements in your company. The
-                          solutions encompass all levels of complexity,
-                          beginning from the traditional implementation to a
-                          cloud environment. In the foreground are IT security,
-                          scalability and a high ROI with the most possible
-                          flexibility of the solutions.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="col-md-3 column">
-                      <div></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <br /><br />
-        </div>
-        <div class="footer-gradient"></div>
-        <footer class="footer">
-          <ul class="footer-links">
-            <li><a href="#">Overview</a></li>
-            <li><a href="#">Expertise</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-          <div class="copyright">
-            <span
-              >&copy; Wolfram MathCore AB—A
-              <a href="">Wolfram Research</a> Company</span
-            >
-          </div>
-        </footer>
-        <script
-          src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-          integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-          crossorigin="anonymous"
-        ></script>
-        <script
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
-          integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
-          crossorigin="anonymous"
-        ></script>
-        <script src="js/script.js"></script>
+{% block content %}
+  <header class="page-header" style="margin-top: 30px !important">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 mx-auto">
+        <h1 class="title text-center" style="margin-bottom: 3rem">
+          Process Consulting
+        </h1>
       </div>
-      <div class="clearfix"></div>
-
-      <script type="text/javascript">
-        var preIndex = 0;
-        var oldIndex = 0;
-        var swiper = new Swiper("#big_imgs", {
-          pagination: {
-            el: ".swiper-pagination",
-            type: "progressbar",
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-          on: {
-            slideChange: function () {
-              //alert('改变了，activeIndex为'+this.activeIndex);
-              oldIndex = preIndex;
-              $("#top_txt_" + oldIndex).animate(
-                {
-                  top: "0px",
-                  opacity: "0",
-                },
-                "slow",
-                function (e) {
-                  $("#top_txt_" + oldIndex).hide();
-                  $("#top_txt_" + preIndex).show();
-                  $("#top_txt_" + preIndex).animate(
-                    {
-                      top: "120px",
-                      opacity: "1",
-                    },
-                    "slow",
-                    function (e) {}
-                  );
-                }
-              );
-
-              $("#main_txt_" + oldIndex).animate(
-                {
-                  left: "0px",
-                  opacity: "0",
-                },
-                "slow",
-                function (e) {
-                  $("#main_txt_" + oldIndex).hide();
-                  $("#main_txt_" + preIndex).show();
-                  $("#main_txt_" + preIndex).animate(
-                    {
-                      left: "80px",
-                      opacity: "1",
-                    },
-                    "slow",
-                    function (e) {}
-                  );
-                }
-              );
-              preIndex = this.activeIndex;
-            },
-          },
-        });
-
-        var swiper1 = new Swiper("#little_item", {
-          slidesPerView: 3,
-          spaceBetween: 30,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-        });
-
-        $(".llitem")
-          .mouseover(function () {
-            $(this).css("box-shadow", "#e1e1e1 0px 0px 10px 5px inset");
-          })
-          .mouseout(function () {
-            $(this).css("box-shadow", "#e1e1e1 0px 0px 0px 0px inset");
-          });
-      </script>
     </div>
-  </body>
-</html>
+  </header>
+
+  <!-- .header -->
+
+  <div class="umb-grid">
+    <div class="grid-section">
+      <div>
+        <div class="container">
+          <div class="row clearfix">
+            <div class="col-md-4 column">
+              <div>
+                <h2>Professional IT Consulting</h2>
+                <p>
+                  We would like to help you to increase your competitiveness, to
+                  react quicker on continuously changing customer requirements,
+                  optimize products and services, winning new markets, maximize
+                  profits and increase the value of your company in long term. We
+                  create a technology and application environment which is
+                  precisely tailored to your requirements, highly scalable,
+                  available at any time, open for future developments and
+                  standards and supports the core of your business.
+                </p>
+
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+              </div>
+            </div>
+            <div class="col-md-1 column">
+              <div></div>
+            </div>
+            <div class="col-md-4 column">
+              <div>
+                <p>
+                  <img
+                    id="__mcenew"
+                    src="{% static 'images/beratung-bild-1-klein.jpg' %}"
+                    alt="INKUIBIT Consulting"
+                    rel="3734"
+                    data-id="3734"
+                    style="max-width: 100%; height: auto"
+                  />
+                </p>
+
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+              </div>
+            </div>
+            <div class="col-md-3 column">
+              <div>
+                <aside class="widget list" style="text-align: center">
+                  <div class="employee">
+                    <div class="default">
+                      <div class="image"></div>
+                      <div class="description">
+                        <div class="vertical" style="padding-top: 5px">
+                          <p class="name">Manuel Sepulveda</p>
+                          <div class="role">
+                            CEO HR Focal Point Consulting Consulting GmbH
+                          </div>
+                          <br />
+
+                          <a
+                            href="javascript:linkTo_UnCryptMailto(&#39;ocknvq&lt;rcvtkem0oeikdpg{Bkpmwdkv0eqo&#39;, 2);"
+                            class="mail"
+                          >
+                            <div
+                              class="livicon block"
+                              data-n="mail"
+                              data-s="16"
+                              data-op="0"
+                              data-c="#1e1e1e"
+                              data-hc="0"
+                              style="margin-bottom: 5px"
+                            ></div>
+                            <small></small>
+                            Send an E-Mail </a
+                          ><br /><br />
+                          <div
+                            class="social"
+                            style="margin-top: 5px; margin-bottom: 5px"
+                          >
+                            <a href="https://www.xing.com/profile/"
+                              ><img src="{% static 'images/Xing 32px.gif' %}"
+                            /></a>
+
+                            <a href="https://www.linkedin.com/in/"
+                              ><img src="{% static 'images/LinkedIn 32px.gif' %}"
+                            /></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </aside>
+
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="container">
+          <div class="row clearfix">
+            <div class="col-md-4 column">
+              <div>
+                <p>
+                  <img
+                    id="__mcenew"
+                    src="{% static 'images/beratung-bild-2-klein.jpg' %}"
+                    alt="HR Focal Point Consulting COnsulting"
+                    rel="3735"
+                    data-id="3735"
+                    style="max-width: 100%; height: auto"
+                  />
+                </p>
+              </div>
+            </div>
+            <div class="col-md-1 column">
+              <div></div>
+            </div>
+            <div class="col-md-4 column">
+              <div>
+                <h2>
+                  <strong style="font-size: 1.7rem">Service-Portfolio</strong>
+                </h2>
+                <p>
+                  Our service portfolio includes consulting in architecture,
+                  strategy, technology and the developing of an individual
+                  solution. We cover every customer section, as well as the whole
+                  IT life cycle.
+                </p>
+                <p>
+                  <strong style="font-size: 1.1rem"
+                    >IT Architecture and Strategy Consulting</strong
+                  >
+                </p>
+                <p>
+                  Innovative technologies help your company to create business
+                  value, as well as stand out from your competitors. With the use
+                  of cloud services, mobility, big data and social media you can
+                  improve the performance, improve the marketable of your services
+                  and products and react quicker to changing customer
+                  requirements. Through the application of different IT
+                  strategies, we are helping you to use new technologies in a more
+                  efficient and effective way. To introduce an appropriate IT
+                  architecture, we are orientating on already existing
+                  <strong> business processes </strong>and organizational
+                  structures.
+                </p>
+                <p>
+                  <strong style="font-size: 1.1rem"
+                    >Technology Consulting and the Development of Individual
+                    Solutions</strong
+                  >
+                </p>
+                <p>
+                  We develop software solutions adjusted to your business and IT
+                  requirements in your company. The solutions encompass all levels
+                  of complexity, beginning from the traditional implementation to
+                  a cloud environment. In the foreground are IT security,
+                  scalability and a high ROI with the most possible flexibility of
+                  the solutions.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3 column">
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+

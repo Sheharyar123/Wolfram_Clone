@@ -11,3 +11,80 @@
   crossorigin="anonymous"
 ></script>
 <script src="{% static 'js/script.js' %}"></script>
+<script type="text/javascript">
+  var preIndex = 0;
+  var oldIndex = 0;
+  var swiper = new Swiper("#big_imgs", {
+    pagination: {
+      el: ".swiper-pagination",
+      type: "progressbar",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    on: {
+      slideChange: function () {
+        //alert('改变了，activeIndex为'+this.activeIndex);
+        oldIndex = preIndex;
+        $("#top_txt_" + oldIndex).animate(
+          {
+            top: "0px",
+            opacity: "0",
+          },
+          "slow",
+          function (e) {
+            $("#top_txt_" + oldIndex).hide();
+            $("#top_txt_" + preIndex).show();
+            $("#top_txt_" + preIndex).animate(
+              {
+                top: "120px",
+                opacity: "1",
+              },
+              "slow",
+              function (e) {}
+            );
+          }
+        );
+
+        $("#main_txt_" + oldIndex).animate(
+          {
+            left: "0px",
+            opacity: "0",
+          },
+          "slow",
+          function (e) {
+            $("#main_txt_" + oldIndex).hide();
+            $("#main_txt_" + preIndex).show();
+            $("#main_txt_" + preIndex).animate(
+              {
+                left: "80px",
+                opacity: "1",
+              },
+              "slow",
+              function (e) {}
+            );
+          }
+        );
+        preIndex = this.activeIndex;
+      },
+    },
+  });
+
+  var swiper1 = new Swiper("#little_item", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  $(".llitem")
+    .mouseover(function () {
+      $(this).css("box-shadow", "#e1e1e1 0px 0px 10px 5px inset");
+    })
+    .mouseout(function () {
+      $(this).css("box-shadow", "#e1e1e1 0px 0px 0px 0px inset");
+    });
+</script>
