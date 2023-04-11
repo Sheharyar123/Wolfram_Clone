@@ -43,7 +43,7 @@ a {
 
 .main-nav .logo {
   color: var(--main-color);
-  font-size: 1.5rem !important;
+  font-size: 1.5rem;
   text-transform: uppercase;
   display: inline !important;
   font-weight: 400;
@@ -170,6 +170,22 @@ a {
   font-size: 1.25rem;
 }
 
+/* Hamburger */
+.menu {
+  all: revert;
+  display: none;
+  padding: 0 !important;
+  border: none !important;
+}
+
+#hamburger {
+  font-size: 1.5rem;
+}
+
+.show {
+  display: block !important;
+}
+
 /* Background Images */
 #slide1 {
   background-image: url(../images/slide-1.jpg);
@@ -285,15 +301,99 @@ a {
   right: 0;
 }
 
+@media (max-width: 900px) {
+  .menu {
+    display: block;
+  }
+  .main-nav .nav-links {
+    background-color: #333;
+    display: none;
+    left: 0;
+    margin: 0 -1rem;
+    padding-bottom: 1rem;
+    position: absolute;
+    top: 3.75rem;
+    width: calc(100% + 2rem);
+    z-index: 100;
+  }
+
+  .main-nav .nav-links li a {
+    font-size: 1.15rem;
+    padding: 0.25 1rem;
+  }
+
+  .main-nav .nav-links .dropdown {
+    margin: 0;
+    max-width: none;
+    padding: 0;
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+
+  .main-nav .nav-links .dropdown li {
+    padding: 0 1.25rem;
+  }
+
+  .main-nav .nav-links li {
+    display: block;
+    padding-top: 0.4rem !important;
+  }
+
+  .main-nav .show-dropdown > a {
+    border-top-color: transparent !important;
+  }
+
+  #hamburger {
+    opacity: 0.78;
+    color: #fff;
+    background-color: #000;
+  }
+  .main-nav {
+    padding: 1.1rem !important;
+  }
+
+  .logo {
+    font-size: 1.5rem !important;
+  }
+
+  .btn-sm {
+    padding: 0;
+    background-color: transparent;
+    font-size: 1rem !important;
+    display: inline !important;
+    margin: 0;
+  }
+
+  .btn-sm:hover {
+    background-color: transparent !important;
+    text-decoration: underline;
+  }
+
+  .arrows {
+    display: none !important;
+  }
+
+  .carousel-indicators {
+    display: none !important;
+  }
+  .carousel-item,
+  .slides-inner {
+    height: 36rem;
+  }
+
+  .slide-content {
+    left: 6rem;
+    padding: 3rem 1.875rem;
+    width: calc(100% - 12rem);
+  }
+}
+
 @media (max-width: 600px) {
   .slide-content {
     left: 0;
     padding: 2.5rem 1.5rem;
     width: 100%;
-  }
-
-  .nav-links {
-    display: none !important;
   }
 
   .slide {
@@ -305,8 +405,37 @@ a {
     height: 32rem;
   }
 
-  .arrows {
-    display: none;
+  .logo {
+    font-size: 1.3rem !important;
+  }
+  .main-nav {
+    padding: 1.15rem !important;
+  }
+  #hamburger {
+    font-size: 1.3rem;
+  }
+
+  .carousel-item,
+  .slides-inner {
+    height: 32rem;
+  }
+
+  main h1 {
+    font-size: 2.3rem !important;
+  }
+
+  .slide-content h1 {
+    line-height: 2.5rem !important;
+  }
+
+  .slide-content {
+    left: 0;
+    padding: 2.5rem 1.5rem;
+    width: 100%;
+  }
+
+  .slide-content p {
+    font-size: 1.3125rem;
   }
 }
 

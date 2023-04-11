@@ -12,21 +12,27 @@ dropdownLink.addEventListener("mouseout", () => {
   dropdownMenu.classList.remove("show");
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const selectElement = document.querySelector(".form-select");
-  const options = document.querySelectorAll("option");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const selectElement = document.querySelector(".form-select");
+//   const options = document.querySelectorAll("option");
 
-  options.forEach((option) => option.classList.add("custom-option"));
+//   options.forEach((option) => option.classList.add("custom-option"));
 
-  selectElement.addEventListener("focus", () => {
-    options.forEach((option) => {
-      option.style.backgroundColor = "#fff";
-    });
-  });
+//   // selectElement.addEventListener("focus", () => {
+//   //   options.forEach((option) => {
+//   //     option.style.backgroundColor = "#fff";
+//   //   });
+//   // });
 
-  // selectElement.addEventListener("change", () => {
-  //   options.forEach((option) => {
-  //     option.style.backgroundColor = option.selected ? "#ff" : "#f77700";
-  //   });
-  // });
+//   // selectElement.addEventListener("change", () => {
+//   //   options.forEach((option) => {
+//   //     option.style.backgroundColor = option.selected ? "#ff" : "#f77700";
+//   //   });
+//   // });
+// });
+
+const hamburger = document.querySelector("#hamburger");
+const menuItems = document.querySelector(".nav-links");
+hamburger.addEventListener("click", () => {
+  menuItems.classList.toggle("show");
 });
