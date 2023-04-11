@@ -7,6 +7,7 @@ from .views import (
     ServicePage4View,
     ServicePage5View,
     ServicePage6View,
+    ContactView,
 )
 
 app_name = "main"
@@ -43,4 +44,5 @@ urlpatterns = [
         ServicePage6View.as_view(),
         name="service6",
     ),
+    path("contact/", ContactView.as_view(), name="contact"),
 ]

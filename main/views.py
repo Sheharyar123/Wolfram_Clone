@@ -1,4 +1,6 @@
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, View
+from django.shortcuts import render
+from .forms import ContactForm
 
 
 class HomePageView(TemplateView):
@@ -27,3 +29,10 @@ class ServicePage5View(TemplateView):
 
 class ServicePage6View(TemplateView):
     template_name = "main/services6.html"
+
+
+class ContactView(View):
+    def get(self, request, *args, **kwargs):
+        form = ContactForm()
+        context = {"form": form}
+        return render(request, "main/contact.html", context)

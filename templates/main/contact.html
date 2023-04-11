@@ -1,303 +1,248 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HR Focal Point LLC | Contact</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header class="main-header">
-      <nav class="main-nav">
-        <a href="index.html"
-          ><h2 class="logo">
-            Swiss Payroll+ <span class="logo-line">|</span>
-            <span class="logo-white">HR Processes</span>
-          </h2>
-        </a>
-        <ul class="nav-links">
-          <li class="menu-trigger dropdown-link">
-            <a href="#" id="expertise-menu">
-              <span>Expertise</span>
-              <i class="fa fa-chevron-down dd-arrow" aria-hidden="true"></i>
-            </a>
-            <ul class="dropdown">
-              <li>
-                <a href="services1.html">Implementation Consulting</a>
-              </li>
-              <li><a href="services2.html">SAP Services Consulting</a></li>
-              <li><a href="services3.html">Process Consulting</a></li>
-              <li><a href="services4.html">Project Management</a></li>
-              <li><a href="services5.html">Development</a></li>
-              <li><a href="services6.html">Support</a></li>
-            </ul>
-          </li>
-          <li><a href="customers.html">Customer Cases</a></li>
-          <a href="contact.html" class="btn btn-sm">Contact Us</a>
-        </ul>
-      </nav>
-    </header>
+{% extends '_base.html' %}
+{% load static %}
 
-    <main>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-sm-12">
-            <section class="contact">
-              <h1 class="contact-title">Contact Us</h1>
-              <p class="contact-detail">
-                Do you have a question? Need to schedule a technical demo for
-                your team? Fill out the form below, and a Wolfram expert will
-                answer shortly. If you need product assistance or help with
-                billing, please contact Support.
-              </p>
-            </section>
-          </div>
-          <div class="col-md-4 col-sm-12">
-            <div class="contact-sidebar">
-              <div class="sidebar-inner">
-                <h3>Wolfram MathCore AB</h3>
-                <div class="sidebar-contact-flex">
-                  <p class="label">Address</p>
-                  <p>Lahore<br />Pakistan</p>
-                  <p class="label">Phone</p>
-                  <p>03219983211</p>
-                  <p class="label">Email</p>
-                  <p><a href="#">mathcore@wolfram.com</a></p>
-                </div>
+{% block title %}Contact{% endblock title %}
+
+{% block content %}
+ 
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-12">
+          <section class="contact">
+            <h1 class="contact-title">Contact Us</h1>
+            <p class="contact-detail">
+              Do you have a question? Need to schedule a technical demo for
+              your team? Fill out the form below, and a Wolfram expert will
+              answer shortly. If you need product assistance or help with
+              billing, please contact Support.
+            </p>
+          </section>
+        </div>
+        {% comment %} <div class="col-md-4 col-sm-12">
+          <div class="contact-sidebar">
+            <div class="sidebar-inner">
+              <h3>Wolfram MathCore AB</h3>
+              <div class="sidebar-contact-flex">
+                <p class="label">Address</p>
+                <p>Lahore<br />Pakistan</p>
+                <p class="label">Phone</p>
+                <p>03219983211</p>
+                <p class="label">Email</p>
+                <p><a href="#">mathcore@wolfram.com</a></p>
               </div>
             </div>
           </div>
-        </div>
+        </div> {% endcomment %}
+      </div>
 
-        <div class="row">
-          <div class="col-md-8 col-sm-12">
-            <form class="contact-form">
-              <!-- Message input -->
-              <div class="form-outline mb-4">
-                <label class="form-label" for="form4Example3"
-                  >Message <span class="important">*</span></label
-                >
-                <textarea
-                  class="form-control"
-                  id="form4Example3"
-                  rows="4"
-                ></textarea>
-              </div>
-              <!-- Radio Input  -->
-              <div class="form-outline mb-4">
-                <label class="form-label" style="display: block"
-                  >Which best describes you?</label
-                >
-                <div class="form-check form-check-inline">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="inlineRadioOptions"
-                    id="inlineRadio1"
-                    value="option1"
-                  />
-                  <label class="form-check-label" for="inlineRadio1"
-                    >Business/Government</label
-                  >
-                </div>
-
-                <div class="form-check form-check-inline">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="inlineRadioOptions"
-                    id="inlineRadio2"
-                    value="option2"
-                  />
-                  <label class="form-check-label" for="inlineRadio2"
-                    >Academic/Faculty</label
-                  >
-                </div>
-
-                <div class="form-check form-check-inline">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="inlineRadioOptions"
-                    id="inlineRadio3"
-                    value="option3"
-                  />
-                  <label class="form-check-label" for="inlineRadio3"
-                    >Student</label
-                  >
-                </div>
-                <div class="form-check form-check-inline">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="inlineRadioOptions"
-                    id="inlineRadio3"
-                    value="option3"
-                  />
-                  <label class="form-check-label" for="inlineRadio3"
-                    >Nonprofessional/Hobbyist</label
-                  >
-                </div>
-              </div>
-              <div class="row">
-                <!-- Organization -->
-                <div class="col-md-6 col-sm-12">
-                  <div class="form-outline mb-4">
-                    <label class="form-label" for="form4Example1"
-                      >Organization</label
-                    >
-                    <input
-                      type="text"
-                      id="form4Example1"
-                      class="form-control"
-                    />
-                  </div>
-                </div>
-
-                <!-- Title, Department, or Field of study -->
-                <div class="col-md-6 col-sm-12">
-                  <div class="form-outline mb-4">
-                    <label class="form-label" for="form4Example1"
-                      >Title, Department, or Field of study</label
-                    >
-                    <input
-                      type="text"
-                      id="form4Example1"
-                      class="form-control"
-                    />
-                  </div>
-                </div>
-                <!-- First name -->
-                <div class="col-md-6 col-sm-12">
-                  <div class="form-outline mb-4">
-                    <label class="form-label" for="form4Example1"
-                      >First Name <span class="important">*</span></label
-                    >
-                    <input
-                      type="text"
-                      id="form4Example1"
-                      class="form-control"
-                    />
-                  </div>
-                </div>
-
-                <!-- Last Name -->
-                <div class="col-md-6 col-sm-12">
-                  <div class="form-outline mb-4">
-                    <label class="form-label" for="form4Example1"
-                      >Last Name <span class="important">*</span></label
-                    >
-                    <input
-                      type="text"
-                      id="form4Example1"
-                      class="form-control"
-                    />
-                  </div>
-                </div>
-                <!-- Email input -->
-                <div class="col-md-12 col-sm-12">
-                  <div class="form-outline mb-4">
-                    <label class="form-label" for="form4Example2"
-                      >Email address <span class="important">*</span></label
-                    >
-                    <input
-                      type="email"
-                      id="form4Example2"
-                      class="form-control"
-                    />
-                  </div>
-                </div>
-                <!-- Phone No -->
-                <div class="col-md-6 col-sm-12">
-                  <div class="form-outline mb-4">
-                    <label class="form-label" for="form4Example1"
-                      >Phone No <span class="important">*</span></label
-                    >
-                    <input
-                      type="text"
-                      id="form4Example1"
-                      class="form-control"
-                    />
-                  </div>
-                </div>
-                <!-- Extension -->
-                <div class="col-md-6 col-sm-12">
-                  <div class="form-outline mb-4">
-                    <label class="form-label" for="form4Example1"
-                      >Extension
-                    </label>
-                    <input
-                      type="text"
-                      id="form4Example1"
-                      class="form-control"
-                    />
-                  </div>
-                </div>
-
-                <!-- Country -->
-                <div class="col-md-12 col-sm-12">
-                  <label class="form-label" for="form4Example1"
-                    >Country <span class="important">*</span></label
-                  >
-                  <select
-                    class="form-select mb-4"
-                    aria-label="Default select example"
-                  >
-                    <option selected>Open this select menu</option>
-                    <option value="1" class="custom-option">One</option>
-                    <option value="2" class="custom-option">Two</option>
-                    <option value="3" class="custom-option">Three</option>
-                  </select>
-                </div>
-              </div>
-              <!-- Submit button -->
-              <button
-                type="submit"
-                class="btn btn-primary contact-btn btn-block mb-4"
+      <div class="row">
+        <div class="col-md-8 col-sm-12">
+          <form class="contact-form">
+            <!-- Message input -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form4Example3"
+                >Message <span class="important">*</span></label
               >
-                Send Message
-              </button>
-            </form>
-          </div>
+              {% comment %} <textarea
+                class="form-control"
+                id="form4Example3"
+                rows="4"
+              ></textarea> {% endcomment %}
+              {{ form.message }}
+            </div>
+            <!-- Radio Input  -->
+            <div class="form-outline mb-4">
+              <label class="form-label" style="display: block"
+                >Which best describes you?</label
+              >
+              <div class="form-check form-check-inline">
+                {% for choice in form.choices %}
+
+                {% comment %} <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inlineRadio1"
+                  value="option1"
+                /> {% endcomment %}
+                {{ choice }}
+                <label class="form-check-label" for="inlineRadio1" style="margin-right: 30px"
+                  >{{ choice.label }}</label
+                > 
+                {% endfor %}
+
+              </div>
+
+              {% comment %} <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inlineRadio2"
+                  value="option2"
+                />
+                <label class="form-check-label" for="inlineRadio2"
+                  >Academic/Faculty</label
+                >
+              </div>
+
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inlineRadio3"
+                  value="option3"
+                />
+                <label class="form-check-label" for="inlineRadio3"
+                  >Student</label
+                >
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inlineRadio3"
+                  value="option3"
+                />
+                <label class="form-check-label" for="inlineRadio3"
+                  >Nonprofessional/Hobbyist</label
+                >
+              </div> {% endcomment %}
+            </div>
+            <div class="row">
+              <!-- Organization -->
+              <div class="col-md-6 col-sm-12">
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form4Example1"
+                    >Organization</label
+                  >
+                  {% comment %} <input
+                    type="text"
+                    id="form4Example1"
+                    class="form-control"
+                  /> {% endcomment %}
+                  {{ form.organization }}
+                </div>
+              </div>
+
+              <!-- Title, Department, or Field of study -->
+              <div class="col-md-6 col-sm-12">
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form4Example1"
+                    >Title, Department, or Field of study</label
+                  >
+                  {% comment %} <input
+                    type="text"
+                    id="form4Example1"
+                    class="form-control"
+                  /> {% endcomment %}
+                  {{ form.department }}
+                </div>
+              </div>
+              <!-- First name -->
+              <div class="col-md-6 col-sm-12">
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form4Example1"
+                    >First Name <span class="important">*</span></label
+                  >
+                  {% comment %} <input
+                    type="text"
+                    id="form4Example1"
+                    class="form-control"
+                  /> {% endcomment %}
+                  {{ form.first_name }}
+                </div>
+              </div>
+
+              <!-- Last Name -->
+              <div class="col-md-6 col-sm-12">
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form4Example1"
+                    >Last Name <span class="important">*</span></label
+                  >
+                  {% comment %} <input
+                    type="text"
+                    id="form4Example1"
+                    class="form-control"
+                  /> {% endcomment %}
+                  {{ form.last_name }}
+                </div>
+              </div>
+              <!-- Email input -->
+              <div class="col-md-12 col-sm-12">
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form4Example2"
+                    >Email address <span class="important">*</span></label
+                  >
+                  {% comment %} <input
+                    type="email"
+                    id="form4Example2"
+                    class="form-control"
+                  /> {% endcomment %}
+                  {{ form.email }}
+                </div>
+              </div>
+              <!-- Phone No -->
+              <div class="col-md-6 col-sm-12">
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form4Example1"
+                    >Phone No <span class="important">*</span></label
+                  >
+                  {% comment %} <input
+                    type="text"
+                    id="form4Example1"
+                    class="form-control"
+                  /> {% endcomment %}
+                  {{ form.phone_no }}
+                </div>
+              </div>
+              <!-- Extension -->
+              <div class="col-md-6 col-sm-12">
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form4Example1"
+                    >Extension
+                  </label>
+                  {% comment %} <input
+                    type="text"
+                    id="form4Example1"
+                    class="form-control"
+                  /> {% endcomment %}
+                  {{ form.extension }}
+                </div>
+              </div>
+
+              <!-- Country -->
+              <div class="col-md-12 col-sm-12">
+                <label class="form-label" for="form4Example1"
+                  >Country <span class="important">*</span></label
+                >
+                {% comment %} <select
+                  class="form-select mb-4"
+                  aria-label="Default select example"
+                >
+                  <option selected>Open this select menu</option>
+                  <option value="1" class="custom-option">One</option>
+                  <option value="2" class="custom-option">Two</option>
+                  <option value="3" class="custom-option">Three</option>
+                </select> {% endcomment %}
+                {{ form.country }}
+              </div>
+            </div>
+            <!-- Submit button -->
+            <button
+              type="submit"
+              class="btn btn-primary contact-btn btn-block mb-4" 
+              style="margin-top: 20px" 
+            >
+              Send Message
+            </button>
+          </form>
         </div>
       </div>
-    </main>
-    <div class="footer-gradient"></div>
-    <footer class="footer">
-      <ul class="footer-links">
-        <li><a href="#">Overview</a></li>
-        <li><a href="#">Expertise</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <div class="copyright">
-        <span
-          >&copy; Wolfram MathCore AB—A
-          <a href="">Wolfram Research</a> Company</span
-        >
-      </div>
-    </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
-      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/script.js"></script>
-  </body>
-</html>
+    </div>
+  </main>
+    
+{% endblock content %}
