@@ -1,371 +1,73 @@
-<!DOCTYPE html>
+{% extends '_base.html' %}
+{% load static %}
 
-<html class="" style="height: auto">
-  <head>
-    <!--[if lt IE 9]>  <html class="no-js old-ie" lang='en'><head itemscope itemtype="http://schema.org/Corporation"  itemref="addresses" >
-	<base href="index.html" />
+{% block title %}Support{% endblock title %}
 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="_token" content="RaLX04j2nUqiw4P36nlzK7SuTWykznyan3MofW3H"/>
-	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-    <title>
-      HR Focal Point Consulting - Your strategic Partner for Human Capital
-      Management
-    </title>
-
-    <link rel="shortcut icon" href="favicon_v=1.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/ico" />
-    <link rel="icon" href="favicon.gif" type="image/gif" />
-    <link rel="icon" href="favicon.png" type="image/png" />
-
-    <link rel="alternate" hreflang="en" href="index.html" />
-
-    <meta
-      name="description"
-      content="Die HR Focal Point Consulting is a Swiss IT SAP HCM and Finance company."
-    />
-
-    <meta
-      property="og:title"
-      content=" HR Focal Point Consulting - Your strategic Partner for Human Capital Management "
-    />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://www.dbmc.ch  /" />
-    <meta
-      property="og:image"
-      content="http://www.dbmc.ch  /images/logo_new.png"
-    />
-    <meta
-      property="og:description"
-      content="HR Focal Point Consulting is a SAP HCM and Finance Company."
-    />
-    <meta
-      property="og:site_name"
-      content="HR Focal Point Consulting   Official Website"
-    />
-    <meta
-      class="viewport"
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="css/swiper.min.css" />
-    <link rel="stylesheet" href="css/utilities.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- End Google Tag Manager -->
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/swiper.min.js"></script>
-    <meta
-      class="viewport"
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <meta
-      class="viewport"
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <style>
-      :root {
-        --swiper-theme-color: #898a8b;
-      }
-      #big_imgs {
-        width: 100%;
-        height: 503px;
-      }
-      .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-      }
-      .top_txt_bg {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: #000;
-        filter: alpha(Opacity=80);
-        -moz-opacity: 0.3;
-        opacity: 0.3;
-      }
-      #little_item {
-        border-left: 1px solid #e1e1e1;
-      }
-      #little_item .swiper-slide {
-        width: 220px !important;
-        margin-right: 0px !important;
-        border-right: 1px solid #e1e1e1;
-        border-bottom: 1px solid #e1e1e1;
-      }
-      .l_item {
-        text-decoration: none;
-      }
-      .l_item:visited {
-        text-decoration: none;
-      }
-
-      .l_item:visited {
-        color: green;
-        text-decoration: underline !important;
-      }
-      .l_item:hover {
-        color: yellow;
-        text-decoration: none !important;
-      }
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-      h2 {
-        font-size: 1.5rem;
-        font-weight: 600;
-      }
-      h1 {
-        font-weight: 700;
-      }
-      h3 {
-        font-weight: 600;
-        font-size: 1.2rem;
-      }
-    </style>
-  </head>
-  <body class="fixed-header loaded fixed">
-    <header class="main-header">
-      <nav class="main-nav">
-        <a href="index.html"
-          ><h2 class="logo">
-            Swiss Payroll+ <span class="logo-line">|</span>
-            <span class="logo-white">HR Processes</span>
-          </h2>
-        </a>
-        <ul class="nav-links">
-          <li class="menu-trigger dropdown-link">
-            <a href="#" id="expertise-menu">
-              <span>Expertise</span>
-              <i class="fa fa-chevron-down dd-arrow" aria-hidden="true"></i>
-            </a>
-            <ul class="dropdown">
-              <li>
-                <a href="services1.html">Implementation Consulting</a>
-              </li>
-              <li><a href="services2.html">SAP Services Consulting</a></li>
-              <li><a href="services3.html">Process Consulting</a></li>
-              <li><a href="services4.html">Project Management</a></li>
-              <li><a href="services5.html">Development</a></li>
-              <li><a href="services6.html">Support</a></li>
-            </ul>
-          </li>
-          <li><a href="customers.html">Customer Cases</a></li>
-          <a href="contact.html" class="btn btn-sm">Contact Us</a>
-        </ul>
-      </nav>
-    </header>
-    <div class="up" id="myBtn" style="display: none">
-      <span class="glyphicon glyphicon-arrow-up"></span>
-    </div>
-    <div class="wrapper">
-      <div class="page-box" style="width: 100%">
-        <div class="page-box-content" style="width: 100%">
-          <header class="page-header" style="margin-top: 30px !important">
-            <div class="row">
-              <div class="col-sm-12 col-md-12 mx-auto">
-                <h1 class="title text-center" style="margin-bottom: 3rem">
-                  Support
-                </h1>
-              </div>
-            </div>
-          </header>
-
-          <!-- .header -->
-
-          <div class="umb-grid">
-            <div class="grid-section">
-              <div>
-                <div class="container">
-                  <div class="row clearfix">
-                    <h2>An Experienced Partner&nbsp;</h2>
-                    <p>
-                      The introduction of a new software system leads often to a
-                      structural change in the organization of the company and
-                      most of the processes. Therefore, it is important to rely
-                      on our professional knowledge and experience when it comes
-                      to software implementation and
-                      <a href="services4.html" title="Project  Management"
-                        ><strong>project management</strong></a
-                      >.
-                    </p>
-                    <h2>Expertise</h2>
-                    <p>
-                      The expertise of our employees is a crucial factor for the
-                      success of our IT projects. We put special emphasis on an
-                      intensive training and development of our employees, for
-                      which reason every employee is highly qualified and
-                      committed to a successful outcome of your project. Our
-                      team has years of experience in project management.
-                      Therefore, it is possible for us to offer your company an
-                      IT solutions which is exactly adjusted to your needs.
-                    </p>
-                    <h2>Methodical Approach</h2>
-                    <p>
-                      For a successful software
-                      <strong
-                        ><a href="services1.html" title="SAP Software"
-                          >implementation</a
-                        ></strong
-                      >, we trust a tested and proved methodology, which is
-                      defined by process steps, and guarantees a high
-                      flexibility during the whole project.
-                    </p>
-                    <h2>Software, which is worth it</h2>
-                    <p>
-                      Invest in an IT project and a software solution which is
-                      highly profitable. Our IT solutions are cost-saving and
-                      profitable at the same time. They aim to shape the
-                      processes within your company more efficient and therefore
-                      reduce the costs in your company. Your revenue will
-                      increase through the optimal usage of your sales
-                      potentials. Also, a more efficient target achievement and
-                      monitoring of the company success will be guaranteed.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <br /><br />
-        </div>
-        <div class="footer-gradient"></div>
-        <footer class="footer">
-          <ul class="footer-links">
-            <li><a href="#">Overview</a></li>
-            <li><a href="#">Expertise</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-          <div class="copyright">
-            <span
-              >&copy; Wolfram MathCore AB—A
-              <a href="">Wolfram Research</a> Company</span
-            >
-          </div>
-        </footer>
-        <script
-          src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-          integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-          crossorigin="anonymous"
-        ></script>
-        <script
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
-          integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
-          crossorigin="anonymous"
-        ></script>
-        <script src="js/script.js"></script>
+{% block content %}
+  
+  <header class="page-header" style="margin-top: 30px !important">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 mx-auto">
+        <h1 class="title text-center" style="margin-bottom: 3rem">
+          Support
+        </h1>
       </div>
-      <div class="clearfix"></div>
-
-      <script type="text/javascript">
-        var preIndex = 0;
-        var oldIndex = 0;
-        var swiper = new Swiper("#big_imgs", {
-          pagination: {
-            el: ".swiper-pagination",
-            type: "progressbar",
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-          on: {
-            slideChange: function () {
-              //alert('改变了，activeIndex为'+this.activeIndex);
-              oldIndex = preIndex;
-              $("#top_txt_" + oldIndex).animate(
-                {
-                  top: "0px",
-                  opacity: "0",
-                },
-                "slow",
-                function (e) {
-                  $("#top_txt_" + oldIndex).hide();
-                  $("#top_txt_" + preIndex).show();
-                  $("#top_txt_" + preIndex).animate(
-                    {
-                      top: "120px",
-                      opacity: "1",
-                    },
-                    "slow",
-                    function (e) {}
-                  );
-                }
-              );
-
-              $("#main_txt_" + oldIndex).animate(
-                {
-                  left: "0px",
-                  opacity: "0",
-                },
-                "slow",
-                function (e) {
-                  $("#main_txt_" + oldIndex).hide();
-                  $("#main_txt_" + preIndex).show();
-                  $("#main_txt_" + preIndex).animate(
-                    {
-                      left: "80px",
-                      opacity: "1",
-                    },
-                    "slow",
-                    function (e) {}
-                  );
-                }
-              );
-              preIndex = this.activeIndex;
-            },
-          },
-        });
-
-        var swiper1 = new Swiper("#little_item", {
-          slidesPerView: 3,
-          spaceBetween: 30,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-        });
-
-        $(".llitem")
-          .mouseover(function () {
-            $(this).css("box-shadow", "#e1e1e1 0px 0px 10px 5px inset");
-          })
-          .mouseout(function () {
-            $(this).css("box-shadow", "#e1e1e1 0px 0px 0px 0px inset");
-          });
-      </script>
     </div>
-  </body>
-</html>
+  </header>
+
+  <div class="umb-grid">
+    <div class="grid-section">
+      <div>
+        <div class="container">
+          <div class="row clearfix">
+            <h2>An Experienced Partner&nbsp;</h2>
+            <p>
+              The introduction of a new software system leads often to a
+              structural change in the organization of the company and
+              most of the processes. Therefore, it is important to rely
+              on our professional knowledge and experience when it comes
+              to software implementation and
+              <a href="{% url 'main:service4' %}" title="Project  Management"
+                ><strong>project management</strong></a
+              >.
+            </p>
+            <h2>Expertise</h2>
+            <p>
+              The expertise of our employees is a crucial factor for the
+              success of our IT projects. We put special emphasis on an
+              intensive training and development of our employees, for
+              which reason every employee is highly qualified and
+              committed to a successful outcome of your project. Our
+              team has years of experience in project management.
+              Therefore, it is possible for us to offer your company an
+              IT solutions which is exactly adjusted to your needs.
+            </p>
+            <h2>Methodical Approach</h2>
+            <p>
+              For a successful software
+              <strong
+                ><a href="{% url 'main:service1' %}" title="SAP Software"
+                  >implementation</a
+                ></strong
+              >, we trust a tested and proved methodology, which is
+              defined by process steps, and guarantees a high
+              flexibility during the whole project.
+            </p>
+            <h2>Software, which is worth it</h2>
+            <p>
+              Invest in an IT project and a software solution which is
+              highly profitable. Our IT solutions are cost-saving and
+              profitable at the same time. They aim to shape the
+              processes within your company more efficient and therefore
+              reduce the costs in your company. Your revenue will
+              increase through the optimal usage of your sales
+              potentials. Also, a more efficient target achievement and
+              monitoring of the company success will be guaranteed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
