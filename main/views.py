@@ -31,6 +31,10 @@ class ServicePage6View(TemplateView):
     template_name = "main/services6.html"
 
 
+class CustomersView(TemplateView):
+    template_name = "main/customers.html"
+
+
 class ContactView(View):
     def get(self, request, *args, **kwargs):
         form = ContactForm()

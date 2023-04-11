@@ -7,6 +7,7 @@ from .views import (
     ServicePage4View,
     ServicePage5View,
     ServicePage6View,
+    CustomersView,
     ContactView,
 )
 
@@ -44,5 +45,6 @@ urlpatterns = [
         ServicePage6View.as_view(),
         name="service6",
     ),
+    path("customers/", CustomersView.as_view(), name="customers"),
     path("contact/", ContactView.as_view(), name="contact"),
 ]
