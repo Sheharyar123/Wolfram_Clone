@@ -301,6 +301,12 @@ a {
   right: 0;
 }
 
+@media (max-width: 1200px) {
+  .customers {
+    background-size: cover !important;
+  }
+}
+
 @media (max-width: 900px) {
   .menu {
     display: block;
@@ -375,17 +381,74 @@ a {
   }
 
   .carousel-indicators {
-    display: none !important;
+    display: none;
   }
+
   .carousel-item,
   .slides-inner {
     height: 36rem;
   }
 
-  .slide-content {
-    left: 6rem;
-    padding: 3rem 1.875rem;
-    width: calc(100% - 12rem);
+  .customers .inner {
+    background: rgba(255, 255, 255, 0.75);
+    max-width: 100% !important;
+  }
+
+  .customers {
+    background-position: 75% top !important;
+    padding: 0 !important;
+  }
+
+  .customers .inner {
+    padding: 2.5rem 1.5rem !important;
+  }
+
+  .customers .carousel-indicators {
+    line-height: 1.875rem !important;
+    height: 3rem !important;
+    padding-top: 0.375rem !important;
+  }
+
+  .customers .slide-quote {
+    width: calc(100% - 15rem) !important;
+    top: 60% !important;
+  }
+
+  .customers .slide-quote p.text:before,
+  .customers .slide-quote p.text:after {
+    font-size: 7rem !important;
+    width: 5rem !important;
+  }
+
+  .customers .slide-quote p.text:before {
+    left: -3rem !important;
+  }
+
+  .customers .slide-quote p.text:after {
+    right: -2rem !important;
+  }
+  .customers p {
+    padding-bottom: 0.5rem !important;
+    font-size: 1rem !important;
+  }
+
+  .customers .slide-quote .img,
+  .customers .slide-quote p.attr {
+    margin-right: 0 !important;
+  }
+  .customers .slide-quote p.attr {
+    margin-bottom: 0rem !important;
+  }
+
+  .show__900 {
+    display: block !important;
+  }
+
+  .hide__600 {
+    display: none !important;
+  }
+  .contact-blurb {
+    padding: 4rem 1.75rem !important;
   }
 }
 
@@ -417,15 +480,7 @@ a {
 
   .carousel-item,
   .slides-inner {
-    height: 32rem;
-  }
-
-  main h1 {
-    font-size: 2.3rem !important;
-  }
-
-  .slide-content h1 {
-    line-height: 2.5rem !important;
+    height: 32rem !important;
   }
 
   .slide-content {
@@ -434,8 +489,103 @@ a {
     width: 100%;
   }
 
-  .slide-content p {
-    font-size: 1.3125rem;
+  .lead {
+    font-size: 1rem;
+  }
+
+  .inner {
+    width: 100% !important;
+  }
+
+  .customers {
+    background-position: 75% top !important;
+  }
+
+  .customers .inner {
+    padding: 2.5rem 1.5rem !important;
+  }
+
+  .customers .carousel-item {
+    background: none !important;
+  }
+
+  .customers .carousel-indicators {
+    line-height: 1.875rem !important;
+    height: 4.25rem !important;
+    padding-top: 0.375rem !important;
+  }
+
+  .customers .slide-quote {
+    max-width: none;
+    padding: 0 1.75rem !important;
+    width: 100% !important;
+  }
+
+  .customers .slide-quote p.text:before,
+  .customers .slide-quote p.text:after {
+    font-size: initial !important;
+    line-height: initial !important;
+    position: relative !important;
+    top: 0 !important;
+  }
+
+  .customers .slide-quote p.text:before {
+    left: 0 !important;
+    margin-left: -0.75rem;
+  }
+
+  .customers .slide-quote p.text:after {
+    right: 0.125rem !important;
+  }
+  .customers p {
+    padding-bottom: 0.5rem !important;
+  }
+
+  .customers .slide-quote .img,
+  .customers .slide-quote p.attr {
+    margin-right: 0 !important;
+    margin-bottom: 0rem !important;
+  }
+
+  .customers .arrows {
+    display: none !important;
+  }
+
+  .show__600 {
+    display: block !important;
+  }
+
+  .hide__900 {
+    display: none !important;
+  }
+
+  .contact-blurb {
+    padding: 3rem 1.75rem !important;
+  }
+
+  .btn-lg {
+    padding: 0.5rem 1.575rem;
+    font-size: 1rem;
+  }
+
+  .footer-links li {
+    margin-right: 2rem !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo {
+    font-size: 1.1rem !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .show__600 {
+    display: block;
+  }
+
+  .hide__320 {
+    display: none;
   }
 }
 
@@ -675,7 +825,7 @@ a {
 /* Customers Intro */
 
 .customers {
-  background: url("./images/top-background.jpg") no-repeat top right;
+  background: url("/static/images/top-background.jpg") no-repeat top right;
   background-size: 50%;
   padding: 0 2.875rem;
 }
@@ -717,11 +867,11 @@ main p {
 }
 
 .customers .slides-inner {
-  height: 25.625rem !important;
+  height: 25.625rem;
 }
 
 .customers .slides-inner .carousel-item {
-  height: 25.625rem !important;
+  height: 25.625rem;
 }
 
 .customers .slide-quote {
@@ -762,16 +912,19 @@ main p {
 }
 
 .customers .slide-quote p.attr {
-  color: #9adaff;
+  color: #222;
   margin-right: -2rem;
   text-align: right;
   padding: 0.625rem 0 0.5rem;
+  font-size: 1.125rem !important;
+  font-weight: 600;
 }
 
 .customers .slide-quote .img {
   margin-right: -2rem;
   text-align: right;
   font-size: 0;
+  margin-bottom: 1rem;
 }
 
 .customers .carousel-indicators {
@@ -810,23 +963,23 @@ main p {
 
 /* Slides Background */
 .customers #slide1 {
-  background: url("./images/quotes-skf-bg.jpg") no-repeat;
+  background: url("/static/images/quotes-skf-bg.jpg") no-repeat;
 }
 
 .customers #slide2 {
-  background: url("./images/quotes-siemens-bg.jpg") no-repeat;
+  background: url("/static/images/quotes-siemens-bg.jpg") no-repeat;
 }
 .customers #slide3 {
-  background: url("./images/quotes-scania-bg.jpg") no-repeat;
+  background: url("/static/images/quotes-scania-bg.jpg") no-repeat;
 }
 .customers #slide4 {
-  background: url("./images/quotes-region-ostergotland-bg.jpg") no-repeat;
+  background: url("/static/images/quotes-region-ostergotland-bg.jpg") no-repeat;
 }
 .customers #slide5 {
-  background: url("./images/quotes-azelio-bg.jpg") no-repeat;
+  background: url("/static/images/quotes-azelio-bg.jpg") no-repeat;
 }
 .customers #slide6 {
-  background: url("./images/quotes-rolls-royce-bg.jpg") no-repeat;
+  background: url("/static/images/quotes-rolls-royce-bg.jpg") no-repeat;
 }
 
 /* Logos Section */
@@ -842,12 +995,12 @@ main p {
 }
 
 .logos .hide {
-  display: none !important;
+  display: none;
 }
 
 /* Contact Blurb */
 .contact-blurb {
-  background: url("./images/bottom-background.jpg") no-repeat bottom left;
+  background: url("/static/images/bottom-background.jpg") no-repeat bottom left;
   background-size: cover;
   padding: 5rem 1.75rem;
 }

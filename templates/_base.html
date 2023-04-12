@@ -102,7 +102,7 @@
     {% include './includes/header.html' %}
 
     {% block content %}{% endblock content %}
-    {% if request.path != '/' %}
+    {% if request.path != '/' and 'customers' not in request.path %}
       <div class="footer-gradient"></div>
     {% endif %}
     {% include './includes/footer.html' %}
