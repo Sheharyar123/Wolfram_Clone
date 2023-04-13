@@ -1,3 +1,4 @@
+from django_countries.data import COUNTRIES
 from django.views.generic import TemplateView, View
 from django.shortcuts import render
 from .forms import ContactForm
@@ -40,3 +41,9 @@ class ContactView(View):
         form = ContactForm()
         context = {"form": form}
         return render(request, "main/contact.html", context)
+
+    def post(self, request, *args, **kwargs):
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            country = COUNTRIES[form.cleaned_data.get("country")]
+            print(country)

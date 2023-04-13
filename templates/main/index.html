@@ -5,6 +5,7 @@
 
 {% block content %}
 
+
 <main>
   <div
     id="carouselExampleIndicators"
@@ -23,7 +24,9 @@
             to drive insight, innovation and results—technology, consulting and
             solutions.
           </p>
-          <a href="#" class="btn btn-lg">Contact Us Today</a>
+          <a href="{% url 'main:contact' %}" class="btn btn-lg" target="_blank"
+            >Contact Us Today</a
+          >
         </div>
       </div>
       <div id="slide2" class="carousel-item">
@@ -36,7 +39,7 @@
             We apply decades of computation leadership to drive innovation in
             your data analytics, algorithm development and system design.
           </p>
-          <a href="{% url 'main:service1' %}" class="btn btn-lg"
+          <a href="{% url 'main:service1' %}" class="btn btn-lg" target="_blank"
             >Engineering Expertise</a
           >
         </div>
@@ -51,7 +54,7 @@
             Through a multiparadigm approach, we have helped a wide range of
             industries to innovate and improve their products and systems.
           </p>
-          <a href="{% url 'main:customers' %}" class="btn btn-lg"
+          <a href="{% url 'main:customers' %}" target="_blank" class="btn btn-lg"
             >Customer Cases</a
           >
         </div>
@@ -168,7 +171,7 @@
               <a href="{% url 'main:service1' %}" class="post-thumbnail"></a>
               <div class="post-text">
                 <h2>
-                  <a href="{% url 'main:service1' %}"
+                  <a href="{% url 'main:service1' %}" target="_blank"
                     >IMPLEMENTATION CONSULTING SERVICES</a
                   >
                 </h2>
@@ -213,24 +216,24 @@
               <a href="{% url 'main:service2' %}" class="post-thumbnail"></a>
               <div class="post-text">
                 <h2>
-                  <a href="{% url 'main:service2' %}"
-                    >SAP SERVICES CONSULTING</a
+                  <a href="{% url 'main:service2' %}" target="_blank"
+                    >Managed Support Services</a
                   >
                 </h2>
                 <div class="service-content">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
-                  soluta excepturi inventore quam officia alias quae delectus
-                  quod sit voluptatem corrupti ipsam voluptate obcaecati ea,
-                  veniam quaerat quia deserunt commodi? Soluta iure quae libero
-                  totam voluptatem porro. Ratione et nulla, hic consequuntur
-                  eveniet accusamus dolore, aliquam officiis repudiandae
-                  consectetur unde explicabo, cum qui laudantium ipsum rem id
-                  alias. Illo consequatur quas voluptatum animi et blanditiis.
-                  Hic sapiente distinctio, expedita et magni temporibus eveniet?
-                  Sint quibusdam sunt eveniet suscipit eligendi culpa animi
-                  incidunt consequatur nisi molestias nihil voluptate vitae
-                  harum maiores perspiciatis quisquam alias aliquid totam,
-                  officiis facere. Aut, sapiente dolor.
+                  Allow HR Focal Point to manage your SAP SuccessFactors and SAP
+                  HCM environments. Our managed support services grant your
+                  business all of the perks without all the stress of in-house
+                  maintenance. And the best news is, our services are designed
+                  to address repetitive administrative tasks, so you can focus
+                  on strategic HR goals and initiative. We know that each
+                  company, taking into account its environment, places
+                  individual requirements on IT solutions in order to be able to
+                  operate optimally in its business. We just start here. We work
+                  closely together with you to adapt your SAP SE solutions to
+                  the specifics of your company (customizing) and&nbsp;prepare
+                  you for the future. Your benefit is the maximum benefit of
+                  your SAP® software.
                 </div>
               </div>
             </div>
@@ -242,24 +245,29 @@
               <a href="{% url 'main:service3' %}" class="post-thumbnail"></a>
               <div class="post-text">
                 <h2>
-                  <a href="{% url 'main:service3' %}"
+                  <a href="{% url 'main:service3' %}" target="_blank"
                     >PROCESS CONSULTING SERVICES</a
                   >
                 </h2>
                 <div class="service-content">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
-                  soluta excepturi inventore quam officia alias quae delectus
-                  quod sit voluptatem corrupti ipsam voluptate obcaecati ea,
-                  veniam quaerat quia deserunt commodi? Soluta iure quae libero
-                  totam voluptatem porro. Ratione et nulla, hic consequuntur
-                  eveniet accusamus dolore, aliquam officiis repudiandae
-                  consectetur unde explicabo, cum qui laudantium ipsum rem id
-                  alias. Illo consequatur quas voluptatum animi et blanditiis.
-                  Hic sapiente distinctio, expedita et magni temporibus eveniet?
-                  Sint quibusdam sunt eveniet suscipit eligendi culpa animi
-                  incidunt consequatur nisi molestias nihil voluptate vitae
-                  harum maiores perspiciatis quisquam alias aliquid totam,
-                  officiis facere. Aut, sapiente dolor.
+                  We would like to help you to increase your competitiveness, to
+                  react quicker on continuously changing customer requirements,
+                  optimize products and services, winning new markets, maximize
+                  profits and increase the value of your company in long term.
+                  We create a technology and application environment which is
+                  precisely tailored to your requirements, highly scalable,
+                  available at any time, open for future developments and
+                  standards and supports the core of your business. Innovative
+                  technologies help your company to create business value, as
+                  well as stand out from your competitors. With the use of cloud
+                  services, mobility, big data and social media you can improve
+                  the performance, improve the marketable of your services and
+                  products and react quicker to changing customer requirements.
+                  Through the application of different IT strategies, we are
+                  helping you to use new technologies in a more efficient and
+                  effective way. To introduce an appropriate IT architecture, we
+                  are orientating on already existing business processes and
+                  organizational structures.
                 </div>
               </div>
             </div>
@@ -271,24 +279,27 @@
               <a href="{% url 'main:service4' %}" class="post-thumbnail"></a>
               <div class="post-text">
                 <h2>
-                  <a href="{% url 'main:service4' %}"
+                  <a href="{% url 'main:service4' %}" target="_blank"
                     >PROJECT MANAGEMENT SERVICES</a
                   >
                 </h2>
                 <div class="service-content">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
-                  soluta excepturi inventore quam officia alias quae delectus
-                  quod sit voluptatem corrupti ipsam voluptate obcaecati ea,
-                  veniam quaerat quia deserunt commodi? Soluta iure quae libero
-                  totam voluptatem porro. Ratione et nulla, hic consequuntur
-                  eveniet accusamus dolore, aliquam officiis repudiandae
-                  consectetur unde explicabo, cum qui laudantium ipsum rem id
-                  alias. Illo consequatur quas voluptatum animi et blanditiis.
-                  Hic sapiente distinctio, expedita et magni temporibus eveniet?
-                  Sint quibusdam sunt eveniet suscipit eligendi culpa animi
-                  incidunt consequatur nisi molestias nihil voluptate vitae
-                  harum maiores perspiciatis quisquam alias aliquid totam,
-                  officiis facere. Aut, sapiente dolor.
+                  Apart from supporting you to manage the challenges in your
+                  company in a professional manner, the service aspect at the HR
+                  Focal Point Consulting Business Solutions GmbH is in the
+                  foreground. Besides a successful collaboration on a work
+                  level, we also keep in mind the interpersonal level in every
+                  client project we are working on. ur project managers are
+                  certified in accordance with the GPM standard and staying at
+                  your side in every stage of the process. No matter if you wish
+                  us to support the project management process or to control the
+                  whole project on a professional and technical level – your
+                  choice is our opportunity! Classical project management means
+                  that the whole project is planned on a basis of different
+                  project stages. For a lot of companies a project management
+                  according to GPM is the first choice to manage their projects.
+                  To meet the growing technical and global requirements, we
+                  adjust every project management to overcome these challenges.
                 </div>
               </div>
             </div>

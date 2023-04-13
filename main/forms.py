@@ -25,5 +25,5 @@ class ContactForm(forms.Form):
     def __init__(self, *args, **kwargs):
         super(ContactForm, self).__init__(*args, **kwargs)
         for field in self.fields:
-            if field is not "choices":
+            if field != "choices":
                 self.fields[field].widget.attrs.update({"class": "form-control"})
