@@ -450,6 +450,10 @@ a {
   .contact-blurb {
     padding: 4rem 1.75rem !important;
   }
+
+  .additional-services {
+    margin-left: 1rem !important;
+  }
 }
 
 @media (max-width: 600px) {
@@ -472,7 +476,7 @@ a {
     font-size: 1.3rem !important;
   }
   .main-nav {
-    padding: 1.15rem !important;
+    padding: 1.2rem !important;
   }
   #hamburger {
     font-size: 1.3rem;
@@ -568,6 +572,10 @@ a {
     font-size: 1rem;
   }
 
+  .additional-services {
+    margin-left: 0rem !important;
+  }
+
   .footer-links li {
     margin-right: 2rem !important;
   }
@@ -576,6 +584,10 @@ a {
 @media (max-width: 400px) {
   .logo {
     font-size: 1.1rem !important;
+  }
+
+  a {
+    font-size: 14px !important;
   }
 }
 
@@ -1227,4 +1239,8 @@ main p {
   text-align: center;
   width: 100%;
   padding: 1rem;
+}
+
+.column {
+  overflow-x: hidden !important;
 }
