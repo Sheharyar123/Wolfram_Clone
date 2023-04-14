@@ -457,6 +457,10 @@ a {
 }
 
 @media (max-width: 600px) {
+  .carousel .carousel-indicators {
+    display: none !important;
+  }
+
   .slide-content {
     left: 0;
     padding: 2.5rem 1.5rem;
