@@ -1,7 +1,9 @@
+from django.contrib import messages
 from django_countries.data import COUNTRIES
 from django.views.generic import TemplateView, View
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import ContactForm
+from .utils import send_contact_email
 
 
 class HomePageView(TemplateView):
@@ -45,5 +47,32 @@ class ContactView(View):
     def post(self, request, *args, **kwargs):
         form = ContactForm(request.POST)
         if form.is_valid():
-            country = COUNTRIES[form.cleaned_data.get("country")]
-            print(country)
+            message = request.POST.get("message")
+            choices = request.POST.get("choices")
+            organization = request.POST.get("organization")
+            department = request.POST.get("department")
+            first_name = request.POST.get("first_name")
+            last_name = request.POST.get("last_name")
+            email = request.POST.get("email")
+            phone_no = request.POST.get("phone_no")
+            extension = request.POST.get("extension")
+            country = COUNTRIES[request.POST.get("country")]
+            context = {
+                "message": message,
+                "choices": choices,
+                "organization": organization,
+                "department": department,
+                "first_name": first_name,
+                "last_name": last_name,
+                "email": email,
+                "phone_no": phone_no,
+                "extension": extension,
+                "country": country,
+            }
+            messages.success(request, "Your message was sent successfully!")
+            send_contact_email("main/emails/send_contact_email.html", context)
+        else:
+            messages.error(
+                request, "There was a problem sending your email. Please try again!"
+            )
+        return redirect("main:contact")

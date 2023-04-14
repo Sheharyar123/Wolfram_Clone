@@ -17,17 +17,13 @@
 
       <div class="row">
         <div class="col-md-8 col-sm-12 mx-auto">
-          <form class="contact-form">
+          <form class="contact-form" method="POST" action="{% url 'main:contact' %}">
+            {% csrf_token %}
             <!-- Message input -->
             <div class="form-outline mb-4">
               <label class="form-label" for="form4Example3"
                 >Message <span class="important">*</span></label
               >
-              {% comment %} <textarea
-                class="form-control"
-                id="form4Example3"
-                rows="4"
-              ></textarea> {% endcomment %}
               {{ form.message }}
             </div>
             <!-- Radio Input  -->
@@ -37,14 +33,6 @@
               >
               <div class="form-check form-check-inline">
                 {% for choice in form.choices %}
-
-                {% comment %} <input
-                  class="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio1"
-                  value="option1"
-                /> {% endcomment %}
                 {{ choice }}
                 <label class="form-check-label" for="inlineRadio1" style="margin-right: 30px"
                   >{{ choice.label }}</label
@@ -52,44 +40,6 @@
                 {% endfor %}
 
               </div>
-
-              {% comment %} <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio2"
-                  value="option2"
-                />
-                <label class="form-check-label" for="inlineRadio2"
-                  >Academic/Faculty</label
-                >
-              </div>
-
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio3"
-                  value="option3"
-                />
-                <label class="form-check-label" for="inlineRadio3"
-                  >Student</label
-                >
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio3"
-                  value="option3"
-                />
-                <label class="form-check-label" for="inlineRadio3"
-                  >Nonprofessional/Hobbyist</label
-                >
-              </div> {% endcomment %}
             </div>
             <div class="row">
               <!-- Organization -->
@@ -98,11 +48,6 @@
                   <label class="form-label" for="form4Example1"
                     >Organization</label
                   >
-                  {% comment %} <input
-                    type="text"
-                    id="form4Example1"
-                    class="form-control"
-                  /> {% endcomment %}
                   {{ form.organization }}
                 </div>
               </div>
@@ -113,11 +58,6 @@
                   <label class="form-label" for="form4Example1"
                     >Title, Department, or Field of study</label
                   >
-                  {% comment %} <input
-                    type="text"
-                    id="form4Example1"
-                    class="form-control"
-                  /> {% endcomment %}
                   {{ form.department }}
                 </div>
               </div>
@@ -127,11 +67,6 @@
                   <label class="form-label" for="form4Example1"
                     >First Name <span class="important">*</span></label
                   >
-                  {% comment %} <input
-                    type="text"
-                    id="form4Example1"
-                    class="form-control"
-                  /> {% endcomment %}
                   {{ form.first_name }}
                 </div>
               </div>
@@ -142,11 +77,6 @@
                   <label class="form-label" for="form4Example1"
                     >Last Name <span class="important">*</span></label
                   >
-                  {% comment %} <input
-                    type="text"
-                    id="form4Example1"
-                    class="form-control"
-                  /> {% endcomment %}
                   {{ form.last_name }}
                 </div>
               </div>
@@ -156,11 +86,6 @@
                   <label class="form-label" for="form4Example2"
                     >Email address <span class="important">*</span></label
                   >
-                  {% comment %} <input
-                    type="email"
-                    id="form4Example2"
-                    class="form-control"
-                  /> {% endcomment %}
                   {{ form.email }}
                 </div>
               </div>
@@ -170,11 +95,6 @@
                   <label class="form-label" for="form4Example1"
                     >Phone No <span class="important">*</span></label
                   >
-                  {% comment %} <input
-                    type="text"
-                    id="form4Example1"
-                    class="form-control"
-                  /> {% endcomment %}
                   {{ form.phone_no }}
                 </div>
               </div>
@@ -184,11 +104,6 @@
                   <label class="form-label" for="form4Example1"
                     >Extension
                   </label>
-                  {% comment %} <input
-                    type="text"
-                    id="form4Example1"
-                    class="form-control"
-                  /> {% endcomment %}
                   {{ form.extension }}
                 </div>
               </div>
@@ -198,15 +113,6 @@
                 <label class="form-label" for="form4Example1"
                   >Country <span class="important">*</span></label
                 >
-                {% comment %} <select
-                  class="form-select mb-4"
-                  aria-label="Default select example"
-                >
-                  <option selected>Open this select menu</option>
-                  <option value="1" class="custom-option">One</option>
-                  <option value="2" class="custom-option">Two</option>
-                  <option value="3" class="custom-option">Three</option>
-                </select> {% endcomment %}
                 {{ form.country }}
               </div>
             </div>

@@ -11,15 +11,19 @@ class ContactForm(forms.Form):
     )
     message = forms.CharField(widget=forms.Textarea)
     choices = forms.ChoiceField(
-        widget=forms.RadioSelect(attrs={"class": "form-check-input"}), choices=CHOICES
+        required=False,
+        widget=forms.RadioSelect(attrs={"class": "form-check-input"}),
+        choices=CHOICES,
     )
-    organization = forms.CharField(max_length=255, widget=forms.TextInput)
-    department = forms.CharField(max_length=255, widget=forms.TextInput)
+    organization = forms.CharField(
+        max_length=255, widget=forms.TextInput, required=False
+    )
+    department = forms.CharField(max_length=255, widget=forms.TextInput, required=False)
     first_name = forms.CharField(max_length=255, widget=forms.TextInput)
     last_name = forms.CharField(max_length=255, widget=forms.TextInput)
     email = forms.CharField(max_length=255, widget=forms.TextInput)
     phone_no = forms.CharField(max_length=50, widget=forms.TextInput)
-    extension = forms.CharField(max_length=255, widget=forms.TextInput)
+    extension = forms.CharField(max_length=255, widget=forms.TextInput, required=False)
     country = CountryField(blank_label="(Select country)").formfield()
 
     def __init__(self, *args, **kwargs):
