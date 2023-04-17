@@ -380,6 +380,10 @@ a {
     display: none !important;
   }
 
+  .slide-content {
+    width: 30rem !important;
+  }
+
   .carousel-indicators {
     display: none;
   }
@@ -458,7 +462,7 @@ a {
 
 @media (max-width: 600px) {
   .carousel .carousel-indicators {
-    display: none !important;
+    bottom: 2rem !important;
   }
 
   .slide-content {
